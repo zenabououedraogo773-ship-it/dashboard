@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projet</title>
+    <style>
+        body 
+            {background-color:white;}
+        .logo
+        {
+        width: 140px;
+        position: static;
+        display: block;
+        margin: 20px auto;
+        }
+        .chute1
+        {
+            width: 100%;
+            display: block;
+            margin: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+        h2
+        {
+            font-size: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <img src="chute1.jpg" class="chute1" width="80%" height="80%">
+     <h1 id="salutation"></h1>
+     <script>
+        let h=new Date().getHours();
+        let messages;
+    if (h >=5 && h<=12)
+    {messages= "Bonjour😉"; }
+    else if (h >=13 && h <=16)
+    {messages= "Bonne après midi 😁";}
+    else if (h >= 17 && h <= 21 )
+    {messages="Bonsoir😉";}
+    else if( h >=22 && h <=23)
+    {messages= "Exellente soirée à vous 😉";}
+    else 
+    {messages= "Bonne nuit dormez bien🛌🛌";}
+    document.getElementById("salutation").textContent = messages;
+    </script>
+    <h2><i>Accueil</i></h2>
+    <img src="logo.png" class="logo" >
+    <p><b>Banfora est une ville du sud-ouest du Burkina Faso fondée en 1903. Elle est la capitale de la région des Tannounyan et de la Province de la Comoé (Pays du Paysan Noir) et chef-lieu du département du même nom. Ville-carrefour, elle s'est développée grâce à l'industrie de la canne à sucre et d'autres activités[1], et, aussi à l'apparition de l'exploitation de la mangue.</b></p>
+    <h3>Sites à Banfora</h3>
+</body>
+<a href=""></a>
+</html>

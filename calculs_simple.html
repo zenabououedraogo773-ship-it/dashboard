@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h1>Calculs Simples en JavaScript</h1> 
+<p>Entrez deux nombres pour effectuer des calculs simples :</p> 
+<label for="number1">Nombre 1 :</label> 
+<input type="number" id="number1" name="number1"> 
+<br> 
+<label for="number2">Nombre 2 :</label> 
+<input type="number" id="number2" name="number2"> 
+<br><br> 
+<button onclick="performCalculations()">Calculer</button> 
+<p id="addition"></p> 
+<p id="subtraction"></p> 
+<p id="multiplication"></p> 
+<p id="division"></p>
+<script>
+    function performCalculations() {
+        let number1=parseFloat(document.getElementById("number1").value);
+        let number2=parseFloat(document.getElementById("number2").value);
+        let addition=(number1)+(number2);
+        let subtraction=(number1)-(number2);
+        let multiplication=(number1)*(number2);
+        let division=(number1)/(number2);
+        document.getElementById("addition").innerHTML="Addition: " + addition;
+        document.getElementById("subtraction").innerHTML="Subtraction: " + subtraction;
+        document.getElementById("multiplication").innerHTML="Multiplication: " + multiplication;
+        document.getElementById("division").innerHTML="Division: " + division;
+    }
+
+</script>
+</body>
+</html>

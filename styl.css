@@ -1,0 +1,54 @@
+/* Style des titres de sections (en violet comme sur ta photo) */
+.section-title {
+    color: #b9b4c2; /* Une nuance de violet/rose abricot selon vos goûts */
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Style de base pour chaque groupe (Texte au-dessus de la case) */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Aligne le label au-dessus de son input */
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Fond blanc pour les cases */
+}
+
+/* --- LES GRILLES DE DISPOSITION --- */
+
+/* Section Informations Personnelles : 2 colonnes égales */
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Espace entre les cases */
+}
+
+/* Section Séjour (Education) : 3 colonnes égales */
+.grid-3-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Section Remarque (Skills) : Prend toute la largeur */
+.grid-1-column {
+    display: grid;
+    grid-template-columns: 1fr;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>FORMULAIRE DE RÉSERVATION A L'HÔTEL ZENABOU</title>
+<link rel="stylesheet" href="style6.css">
+<style>
+    .grid-2-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-3-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-1-column {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            font-size: 15px; 
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .hotel-booking-form input[type="text"],
+        .hotel-booking-form input[type="email"],
+        .hotel-booking-form input[type="tel"],
+        .hotel-booking-form input[type="date"],
+        .hotel-booking-form select {
+            width: 100%;
+            padding: 12px; 
+            font-size: 14px;
+            border: 1.5px solid #cbd5e1; 
+            border-radius: 10px; 
+            background-color: #f8fafc; 
+            box-sizing: border-box;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .hotel-booking-form input:focus,
+        .hotel-booking-form select:focus {
+            border-color: #74ebd5;
+            background-color: #ffffff;
+        }
+
+        
+        .section-title {
+            margin-top: 35px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0; 
+            color: #0f172a;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hotel-booking-form input[type="submit"] {
+            padding: 12px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            color: #0f172a;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.2s;
+        }
+        
+        .hotel-booking-form input[type="submit"]:hover {
+            transform: scale(1.02);
+        }
+</style>
+</head>
+<body>
+    <header class="header-full-width">
+        <div class="logo-area">
+            <img src="logo.jpeg" alt="Logo" class="main-logo">
+        </div>
+        <nav class="nav-bar-fine">
+            <a href="index.html">Accueil</a>
+            <a href="patrimoine.html">Patrimoine</a>
+            <a href="reservation.html">Réservation D'Hôtel</a>
+            <a href="galerie.html">Galerie</a>
+        </nav>
+    </header>
+<div id="header" class="cadre-blanc"> 
+<h1>HÔTEL ZENABOU</h1>
+<img src="hotel.PNG" alt="Image de l'hôtel Zenabou">
+<p>Réserver Votre Séjour</p>
+<form action="#" method="post" class="hotel-booking-form">
+    
+    <h3 class="section-title">INFORMATIONS PERSONNELLES</h3>
+<div class="grid-2-columns">
+    <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="user_name" required>
+    </div>
+    <div class="form-group">
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="user_first_name" required>
+    </div>
+    <div class="form-group">
+        <label for="ADRESSE E-MAIL">Adresse E-mail :</label>
+        <input type="email" id="ADRESSE E-MAIL" name="user_mail" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Téléphone :</label>
+        <input type="tel" id="phone" name="user_phone" placeholder="+226 61 23 45 67" required>
+    </div>
+</div>
+
+    <h3 class="section-title">VOTRE SÉJOUR</h3>
+<div class="grid-3-columns">
+    <div class="form-group">
+        <label for="DATE-D-ARRIVEE">Date d'arrivée :</label>
+        <input type="date" id="DATE-D-ARRIVEE" name="check_in_date" required>
+    </div>
+    <div class="form-group">
+        <label for="DATE-DE-DEPART">Date de départ :</label>
+        <input type="date" id="DATE-DE-DEPART" name="check_out_date" required>
+    </div>
+    <div class="form-group">
+        <label for="TYPE-DE-CHAMBRE">Type de chambre :</label>
+        <select id="TYPE-DE-CHAMBRE" name="room_type" required>
+            <option value="">Sélectionnez un type de chambre</option>
+            <option value="simple">Chambre Standard</option>
+            <option value="double">Chambre Familiale</option>
+            <option value="Suite Royale">Suite Royale</option>
+        </select>
+    </div>
+</div>
+
+    <h3 class="section-title">REMARQUE OU DEMANDE PARTICULIÈRE</h3>
+<div class="grid-1-column">
+    <div class="form-group full-width">
+        <label for="Remarque ou Demande Particulière">Vos demandes :</label>
+        <input type="text" id="Remarque ou Demande Particulière" name="special_request" placeholder="Ex: lit de bébé, Arrivée tardive...">
+    </div>
+</div>
+<div style="text-align: center;">
+    <input type="submit" value="Confirmer Votre Réservation">
+</div>
+</form>
+</div>
+</body>
+</html>
+<script>
+const aujourdHui = new Date().toISOString().split('T')[0];
+document.getElementById('DATE-D-ARRIVEE').min = aujourdHui;
+document.getElementById('DATE-DE-DEPART').min = aujourdHui;
+const inputArrivee = document.getElementById('DATE-D-ARRIVEE');
+const inputDepart = document.getElementById('DATE-DE-DEPART');
+inputArrivee.addEventListener('change', function() {
+    inputDepart.min = inputArrivee.value;
+    if (inputDepart.value && inputDepart.value < inputArrivee.value) {
+        inputDepart.value = "";
+        alert("La date de départ doit être après la date d'arrivée !");
+    }
+});
+const formulaire = document.querySelector('.hotel-booking-form');
+formulaire.addEventListener('submit', function(evenement) {
+    evenement.preventDefault(); 
+    const prenom = document.getElementById('prenom').value;
+    alert(`Merci ! Votre demande de réservation a bien été prise en compte.`);
+});
+</script>

@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+header {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: #1e293b;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* ===================================================
+   MODIFICATION ICI : PROTECTION GRAND ÉCRAN SANS BUG
+   =================================================== */
+section {
+    padding: 30px;
+    text-align: center;
+    
+    /* On limite la largeur globale de la page pour les grands écrans */
+    max-width: 1200px;       
+    margin: 0 auto; /* Centre tout le contenu proprement au milieu de l'ordi */
+}
+
+h2 {
+    color: #0f172a;
+}
+
+/* ===================================================
+   VOS BLOCS BLANCS D'ORIGINE (Formulaire, Cartes, etc.)
+   =================================================== */
+/* On remet EXACTEMENT votre code de base pour que vos blocs réapparaissent naturellement */
+div {
+    display: inline-block;
+    width: 280px;
+    margin: 15px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    vertical-align: top;
+}
+
+/* Exception uniquement pour que la galerie prenne une belle taille */
+div.galerie-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 1140px; /* S'adapte parfaitement dans la section de 1200px */
+    background: white;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+p {
+    padding: 10px;
+    font-weight: bold;
+    color: #334155;
+}
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* ===================================================
+   RESPONSIVE (Téléphones et Tablettes)
+   =================================================== */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    div {
+        display: block;
+        width: calc(100% - 30px);
+        margin: 15px auto;
+    }
+
+    img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 8px 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    div {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+
+    img {
+        height: 150px;
+    }
+
+    p {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}

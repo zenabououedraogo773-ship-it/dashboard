@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h1>Table de Multiplication</h1> 
+<p>Entrez un nombre pour générer sa table de multiplication :</p> 
+<label for="multiplicationNumber">Nombre :</label> 
+<input type="number" id="multiplicationNumber" name="multiplicationNumber"> 
+<br><br> 
+<button onclick="generateMultiplicationTable()">Générer la Table</button> 
+<div id="multiplicationTable"></div> 
+<script> 
+function generateMultiplicationTable() {
+    let number=parseInt(document.getElementById("multiplicationNumber").value);
+    let i;
+    document.getElementById("multiplicationTable").innerHTML = "";
+    for(i=0;i<10;i++) {
+        let result=number*i
+        document.getElementById("multiplicationTable").innerHTML+=`${i} x ${number} = ${result}<br>`;
+     
+    }
+
+}
+</script>
+</body>     
+</html>
